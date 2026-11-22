@@ -1,0 +1,902 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.top-bar {
+  background: linear-gradient(90deg, #4b0e86, #681ab0);
+  color: #ffffff;
+  text-align: center;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 9px 16px;
+}
+
+.nav-container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #2b094b;
+  letter-spacing: 0.5px;
+}
+
+.brand-tag {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #5b3a7d;
+  letter-spacing: 1.2px;
+  margin-top: 2px;
+}
+
+.nav-links-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  padding-bottom: 6px;
+  transition: color 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #5b169b;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2.5px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #681ab0, #14c8c8);
+}
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-btn {
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: #f6effc;
+  border: 1px solid #e6d4f7;
+  color: #3d0c6e;
+  font-size: 14.5px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.wa-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f6effc;
+  border: 1px solid #e6d4f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ================= HERO CAROUSEL ================= */
+.hero-section {
+  background: linear-gradient(180deg, #eaeaf7 0%, #f5f5fc 100%);
+  padding: 20px 24px 36px;
+}
+
+.hero-card {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(28, 12, 62, 0.14);
+  background: #0d1624;
+}
+
+.hero-slide-link {
+  display: block;
+  width: 100%;
+}
+
+.hero-banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 540px;
+  object-fit: cover;
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(15, 23, 42, 0.65);
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 5;
+}
+
+.hero-arrow:hover {
+  background: rgba(91, 22, 155, 0.9);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.hero-arrow.left {
+  left: 16px;
+}
+
+.hero-arrow.right {
+  right: 16px;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 5;
+}
+
+.hero-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.hero-dot.active {
+  width: 22px;
+  background: #ffffff;
+}
+
+/* ================= BRAND INTRO SECTION ================= */
+.brand-intro-section {
+  background: linear-gradient(180deg, #eaeaf7 0%, #f1f0fa 100%);
+  padding: 28px 24px 48px;
+  text-align: center;
+}
+
+.brand-intro-container {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.brand-intro-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #48067e;
+  line-height: 1.22;
+  letter-spacing: -0.4px;
+  margin-bottom: 16px;
+}
+
+.brand-intro-desc {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #5b6375;
+  max-width: 730px;
+  margin: 0 auto 22px;
+}
+
+.brand-intro-divider {
+  display: inline-block;
+  width: 68px;
+  height: 3.5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5b169b 0%, #14c8c8 100%);
+}
+
+@media (max-width: 768px) {
+  .brand-intro-title {
+    font-size: 26px;
+  }
+}
+
+/* ================= WATER FEATURE SHOWCASE CARDS ================= */
+.water-feature-wrapper {
+  background: linear-gradient(180deg, #f1f0fa 0%, #eaeaf7 100%);
+  padding: 12px 24px 28px;
+}
+
+.water-feature-card {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f6fd 100%);
+  border: 1px solid #e7e1f5;
+  border-radius: 22px;
+  padding: 38px 42px 36px;
+  box-shadow: 0 12px 32px rgba(45, 10, 78, 0.06);
+}
+
+.water-card-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 30px;
+}
+
+.water-card-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #48067e;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.water-card-grid {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.water-sub-heading {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #3d096c;
+  margin-bottom: 10px;
+}
+
+.water-intro-para {
+  font-size: 13.8px;
+  line-height: 1.72;
+  color: #5b6375;
+  margin-bottom: 22px;
+}
+
+.mineral-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mineral-item {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 14px;
+}
+
+.mineral-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #48067e;
+  font-weight: 800;
+}
+
+.mineral-name {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e2433;
+  margin-bottom: 6px;
+}
+
+.mineral-sublist {
+  list-style: none;
+  padding-left: 4px;
+  margin: 0;
+}
+
+.mineral-sublist li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #5b6375;
+  margin-bottom: 3px;
+}
+
+.mineral-sublist li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #48067e;
+}
+
+.water-image-box {
+  background: #ffffff;
+  border: 1px solid #ece6f8;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(45, 10, 78, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.water-image-box img {
+  width: 100%;
+  max-height: 440px;
+  object-fit: contain;
+  display: block;
+}
+
+.water-card-bottom {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid #e6dff5;
+}
+
+.general-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.general-benefits-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13.8px;
+  line-height: 1.75;
+  color: #5b6375;
+  margin-bottom: 4px;
+}
+
+.general-benefits-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #48067e;
+  font-weight: 800;
+}
+
+.general-benefits-list li strong {
+  color: #1e2433;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .water-card-grid {
+    grid-template-columns: 1fr;
+  }
+  .water-feature-card {
+    padding: 26px 20px;
+  }
+}
+/* ================= BALANCED MINERAL COMPOSITION (3x3 GRID) ================= */
+.features-section {
+  background: linear-gradient(180deg, #f3f1fb 0%, #f8f7fc 100%);
+  padding: 46px 24px 54px;
+}
+
+.features-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.features-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 36px;
+}
+
+.features-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #48067e;
+  margin-bottom: 10px;
+}
+
+.features-subtitle {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #3f4656;
+  margin-bottom: 16px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.feature-card {
+  background: linear-gradient(160deg, #f5effc 0%, #ffffff 55%, #eef4fc 100%);
+  border: 1px solid #e6def5;
+  border-radius: 18px;
+  padding: 26px 24px;
+  box-shadow: 0 8px 22px rgba(45, 10, 78, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(45, 10, 78, 0.08);
+}
+
+.feature-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #3d096c;
+  margin-bottom: 8px;
+}
+
+.feature-card-subtitle {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #4b1280;
+  margin-bottom: 10px;
+}
+
+.feature-card-desc {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #5b6375;
+}
+
+@media (max-width: 960px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= GOOGLE REVIEWS SECTION ================= */
+.reviews-section {
+  background: linear-gradient(180deg, #f3f1fb 0%, #f8f7fc 100%);
+  padding: 36px 24px 56px;
+}
+
+.reviews-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.reviews-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #48067e;
+  margin-bottom: 14px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: center;
+}
+
+.review-card {
+  background: linear-gradient(160deg, #f5effc 0%, #ffffff 55%, #eef4fc 100%);
+  border: 1px solid #e6def5;
+  border-radius: 18px;
+  padding: 26px 24px;
+  box-shadow: 0 8px 22px rgba(45, 10, 78, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(45, 10, 78, 0.08);
+}
+
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.reviewer-name {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #1e2433;
+}
+
+.review-stars {
+  color: #f5b301;
+  font-size: 14px;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+
+.review-text {
+  font-size: 13.5px;
+  line-height: 1.72;
+  color: #5b6375;
+}
+
+@media (max-width: 960px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= OUR PURPOSE AND INITIATIVES ================= */
+.purpose-section {
+  background: linear-gradient(180deg, #f6f4fc 0%, #f1effa 100%);
+  padding: 44px 24px 54px;
+}
+
+.purpose-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.purpose-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 36px;
+}
+
+.purpose-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #48067e;
+  margin-bottom: 10px;
+}
+
+.purpose-subtitle {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #4a5162;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.purpose-top-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.purpose-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.purpose-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(165deg, #ffffff 0%, #f9f6fe 100%);
+  border: 1px solid #e8e1f6;
+  border-radius: 18px;
+  padding: 26px 26px 28px;
+  box-shadow: 0 8px 22px rgba(45, 10, 78, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.purpose-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(45, 10, 78, 0.08);
+}
+
+/* Soft decorative circle on Vision & Mission cards */
+.purpose-card-large::after {
+  content: "";
+  position: absolute;
+  right: 26px;
+  bottom: -28px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(126, 34, 206, 0.07);
+  pointer-events: none;
+}
+
+.purpose-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6211aa 0%, #7c1fd1 100%);
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 14px rgba(98, 17, 170, 0.22);
+}
+
+.purpose-card-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #141926;
+  margin-bottom: 10px;
+}
+
+.purpose-card-desc {
+  font-size: 13.8px;
+  line-height: 1.7;
+  color: #5b6375;
+}
+
+@media (max-width: 960px) {
+  .purpose-bottom-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .purpose-top-grid,
+  .purpose-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================= REGIONAL DISTRIBUTION & QUALITY COMMITMENT ================= */
+.bottom-banner-wrapper {
+  background: linear-gradient(180deg, #f3f1fb 0%, #f7f6fc 100%);
+  padding: 12px 24px 28px;
+}
+
+/* Purple Distribution Card */
+.distribution-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 1120px;
+  margin: 0 auto;
+  background: linear-gradient(110deg, #430a79 0%, #6312ad 55%, #7b1fd4 100%);
+  border-radius: 22px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: #ffffff;
+  box-shadow: 0 14px 32px rgba(67, 10, 121, 0.18);
+}
+
+/* Decorative translucent circle on top-right */
+.distribution-card::after {
+  content: "";
+  position: absolute;
+  top: -45px;
+  right: -35px;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.distribution-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.distribution-content {
+  position: relative;
+  z-index: 1;
+}
+
+.distribution-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 8px;
+}
+
+.distribution-title {
+  font-size: 27px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.distribution-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 780px;
+  margin-bottom: 18px;
+}
+
+.distribution-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.city-pill {
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Quality Commitment Card */
+.commitment-card {
+  max-width: 1120px;
+  margin: 0 auto 24px;
+  background: linear-gradient(110deg, #f3ebfc 0%, #ffffff 55%, #eefaf9 100%);
+  border: 1px solid #e5ddf4;
+  border-radius: 22px;
+  padding: 38px 42px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.45fr auto;
+  gap: 32px;
+  align-items: center;
+  box-shadow: 0 10px 28px rgba(45, 10, 78, 0.05);
+}
+
+.commitment-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #ebe0f9;
+  color: #5b169b;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.commitment-title {
+  font-size: 31px;
+  font-weight: 800;
+  color: #48067e;
+  line-height: 1.22;
+}
+
+.commitment-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.commitment-middle p {
+  font-size: 13.8px;
+  line-height: 1.7;
+  color: #525a6c;
+  margin: 0;
+}
+
+.purification-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 22px;
+  border-radius: 12px;
+  background: #f2fbfa;
+  border: 1px solid #b5ece7;
+  color: #0f766e;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.purification-btn:hover {
+  background: #e1f7f5;
+  border-color: #14c8c8;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 960px) {
+  .distribution-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+  }
+
+  .commitment-card {
+    grid-template-columns: 1fr;
+    padding: 28px 24px;
+    gap: 22px;
+  }
+}
+/* ================= UNIFIED SMOOTH PAGE BACKGROUND ================= */
+.app {
+  background: linear-gradient(180deg, #ecebf8 0%, #f5f4fc 35%, #f7f6fc 100%);
+  min-height: 100vh;
+}
+
+.hero-section,
+.brand-intro-section,
+.water-feature-wrapper,
+.features-section,
+.reviews-section,
+.purpose-section,
+.bottom-banner-wrapper {
+  background: transparent !important;
+}
+/* ================= EXACT ORIGINAL POPPINS TYPOGRAPHY ================= */
+body,
+button,
+input {
+  font-family: "Poppins", "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+.brand-intro-title,
+.water-card-title,
+.features-title,
+.reviews-title,
+.purpose-title,
+.commitment-title {
+  font-family: "Poppins", "Inter", sans-serif;
+  color: rgb(75, 0, 130);
+  letter-spacing: -0.03em;
+}
